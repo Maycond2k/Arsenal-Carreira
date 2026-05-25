@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Modo Carreira – Arsenal | Maycon Santos</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #EF0107 0%, #ffffff 100%);
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background: #EF0107;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid #FEF200;
+    }
+    nav {
+      background: #063672;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #FEF200;
+    }
+    
+    .tab-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .tab-button {
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      background: #9C1D26;
+      color: white;
+      border-radius: 8px 8px 0 0;
+      margin: 0 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tab-button.active {
+      background: #ffffff;
+      color: #EF0107;
+      border-top: 4px solid #EF0107;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+
+    section {
+      padding: 30px;
+      max-width: 1100px;
+      margin: auto;
+      background: #ffffff;
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    h2 {
+      color: #EF0107;
+    }
+    .card {
+      background: #fafafa;
+      padding: 20px;
+      border-left: 5px solid #EF0107;
+      margin-bottom: 20px;
+    }
+    .music-box {
+      text-align: center;
+      margin: 20px;
+    }
+    .music-box button {
+      padding: 12px 25px;
+      font-size: 18px;
+      background: #063672;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .music-box button:hover {
+      background: #EF0107;
+    }
+
+    .galeria-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    .galeria-item {
+      text-align: center;
+      width: 320px;
+      margin-bottom: 30px;
+    }
+    .galeria-item h3 {
+      font-size: 18px;
+      color: #b40000;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .galeria-item p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .galeria-item img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      border: 1px solid #ddd;
+    }
+
+    .finance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .finance-table th, .finance-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    .finance-table th {
+      background-color: #f2f2f2;
+      color: #063672;
+    }
+
+    /* Estilo para as Tabelas da Central do Elenco que você gostou */
+    .elenco-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+    .elenco-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #eee;
+      font-size: 15px;
+    }
+    .elenco-table td:nth-child(1) {
+      font-weight: bold;
+      width: 45%;
+    }
+    .elenco-table td:nth-child(2) {
+      color: #666;
+      width: 20%;
+    }
+    .elenco-table td:nth-child(3) {
+      text-align: right;
+      width: 35%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #EF0107;
+      color: #ffffff;
+      margin-top: 40px;
+      border-top: 4px solid #FEF200;
+    }
+  </style>
+</head>
+
+<body>
+
+<script>
+  var senha = prompt("Digite a senha para acessar o site:");
+  if (senha !== "chupabife") {
+    alert("Senha incorreta!");
+    window.location.href = "https://google.com";
+  }
+</script>
+
+<header>
+  <img src="img/arsenal-logo.jpg" alt="Escudo do Arsenal" style="width:120px; margin-bottom:10px;">
+  <h1>Arsenal FC – Modo Carreira EA FC 26</h1>
+  <p>Treinador: Maycon Santos (Brasil)</p>
+  <div style="background: rgba(0,0,0,0.2); display: inline-block; padding: 10px 20px; border-radius: 10px; margin-top: 10px;">
+    <p style="margin: 5px 0;"><strong>Salário Semanal:</strong> €0</p>
+    <p style="margin: 5px 0;"><strong>Salário Mensal:</strong> €0</p>
+    <p style="margin: 5px 0;"><strong>Salário Anual:</strong> €0</p>
+  </div>
+</header>
+
+<section id="foto-treinador">
+  <div class="card" style="text-align:center;">
+    <img src="img/treinador-maycon.jpg" alt="Treinador Maycon Santos"
+         style="width:220px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.35);">
+    <p><strong>Maycon Santos</strong></p>
+    <p>Treinador do Arsenal FC</p>
+  </div>
+</section>
+
+<div class="music-box">
+  <button id="botaoMusica">▶ Ouvir Hino do Arsenal</button>
+</div>
+
+<script>
+  const musica = new Audio("audio/hino-arsenal.mp3");
+  musica.loop = true;
+  const botao = document.getElementById("botaoMusica");
+
+  botao.addEventListener("click", function () {
+    if (musica.paused) {
+      musica.play();
+      botao.textContent = "⏸ Pausar Música";
+    } else {
+      musica.pause();
+      botao.textContent = "▶ Ouvir Hino do Arsenal";
+    }
+  });
+</script>
+
+<nav>
+  <a href="#historia">História</a>
+  <a href="#financeiro">Financeiro</a>
+  <a href="#objetivos">Objetivos</a>
+</nav>
+
+<div class="tab-container">
+  <button class="tab-button active" onclick="openTab(event, 'temp3031')">Temporada 30/31</button>
+  <button class="tab-button" onclick="openTab(event, 'temp3132')">Temporada 31/32</button>
+</div>
+
+<div id="temp3031" class="tab-content active">
+    <section id="historia">
+      <h2>História do Treinador</h2>
+      <div class="card">
+        <p>Reconhecido como um dos melhores técnicos do mundo e de sua geração, <strong>Maycon Santos</strong> assumiu o comando do Arsenal após uma passagem lendária pelo <strong>Brentford</strong>. No clube anterior, onde permaneceu por 5 anos e 6 meses, Maycon construiu um legado incrível, conquistando títulos antes impossíveis e jamais imagináveis, saindo de lá com um currículo invejável e o status de verdadeira lenda.</p>
+        
+        <p>A chegada ao Arsenal trouxe um desafio enorme: recolocar os <i>Gunners</i> no mapa do futebol elite, de onde nunca deveriam ter saído. Quando Maycon aceitou o cargo, a situação era caótica — o time amargava a **15ª colocação na Premier League**, já havia sido eliminado da Carabao Cup e restavam apenas as disputas da FA Cup e da UEFA Europa League. Para efeito de comparação, antes de sua saída, Maycon havia deixado o Brentford isolado na 1ª colocação, com uma excelente vantagem de pontos.</p>
+        
+        <p>O desafio de transformar um elenco totalmente desacreditado transformou-se em mais uma página de história. Sob o comando estratégico do brasileiro, o Arsenal arrancou na tabela da Premier League de forma avassaladora, terminando a competição em um histórico **2º lugar**, ficando a apenas 11 pontos de diferença do campeão Brentford. Para coroar o ano de reviravolta, Maycon faturou os títulos da **FA Cup** e da **UEFA Europa League**.</p>
+        
+        <p>Apesar das conquistas expressivas, os bastidores ferveram. Fiel ao seu estilo de gestão enérgica, Maycon chegou reformulando o elenco, dispensando medalhões e estrelas consagradas para abrir espaço a jogadores jovens e rejuvenescer a equipe. Essa postura radical gerou atrito imediato com a diretoria e com parte da torcida, que não curtiu as saídas das referências do time. Mesmo campeão, o treinador terminou a temporada na corda bamba.</p>
+        
+        <p>Em uma demonstração de força, a diretoria cedeu ao talento do comandante e deu o aval definitivo, renovando seu contrato para a **temporada 31/32**. Dono do projeto, Maycon impôs exigências rígidas: autonomia total para comandar o departamento de futebol, carta branca para afastar estrelas veteranas devido à idade e foco absoluto na contratação de novas promessas mundiais. Com a promessa e a garantia de novos títulos para as próximas temporadas, a nova era de Maycon Santos no Arsenal começa oficialmente.</p>
+      </div>
+    </section>
+
+    <section id="financeiro">
+      <h2>💰 Finanças</h2>
+      <div class="card">
+        <h3>Resumo Financeiro: Arsenal</h3>
+        <table class="finance-table">
+          <thead>
+            <tr>
+              <th>Categoria</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Receitas</td>
+              <td style="color: green; font-weight: bold;">+ $ 672,72 MI</td>
+            </tr>
+            <tr>
+              <td>Despesas</td>
+              <td style="color: red; font-weight: bold;">- $ 505,89 MI</td>
+            </tr>
+            <tr style="background-color: #eee;">
+              <td><strong>Lucro Total</strong></td>
+              <td style="color: green; font-weight: bold;"><strong>+ $ 166,83 MI</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 20px;"><strong>📈 Indicadores de Performance:</strong></p>
+        <ul>
+          <li>Valor do Clube: <strong>$ 1,35 bi</strong></li>
+          <li>Projeção Final: <strong>$ 1,55 bi</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="titulos">
+      <h2>🏆 Títulos da Temporada</h2>
+      <div class="card">
+        <p>🏆 <strong>UEFA Europa League</strong><br>Temporada 30/31</p>
+        <p>🏆 <strong>FA Cup (Copa da Inglaterra)</strong><br>Temporada 30/31</p>
+      </div>
+    </section>
+
+    <section id="galeria-titulos">
+      <h2>📸 Galeria de Títulos</h2>
+      <div class="galeria-grid">
+        <div class="galeria-item">
+          <h3>UEFA Europa League</h3>
+          <p>Temporada 30/31</p>
+          <img src="img/europa-league-3031.jpg" alt="UEFA Europa League">
+        </div>
+        
+        <div class="galeria-item">
+          <h3>FA Cup</h3>
+          <p>Temporada 30/31</p>
+          <img src="img/fa-cup-3031.jpg" alt="FA Cup">
+        </div>
+
+        <div class="galeria-item">
+          <h3>Melhor Treinador do Mundo</h3>
+          <p>Maycon Santos - Temporada 30/31</p>
+          <img src="img/fifa-the-best-maycon.jpg" alt="Fifa The Best">
+        </div>
+      </div>
+    </section>
+
+    <section id="tatica-time">
+      <h2>📊 Tática do Time (30/31)</h2>
+      <div class="card">
+        <p><strong>Predefinição:</strong> Personalizado</p>
+        <p><strong>Esquema:</strong> 4-2-1-3</p>
+        <p><strong>Estilo de armação:</strong> Passe Curto</p>
+        <p><strong>Abordagem defensiva:</strong> Equilibrado</p>
+      </div>
+    </section>
+
+    <section id="elenco-titular">
+      <h2>📋 Elenco Titular</h2>
+      <div class="card">
+        <p>🧤 <strong>Goleiro:</strong> Gonzalo Planas</p>
+        <p>🛡️ <strong>Defensores:</strong> Wesley (LD), William Saliba (ZAG), Dean Huijsen (ZAG), Juanma Pastor (LE)</p>
+        <p>⚙️ <strong>Meio-Campistas:</strong> Declan Rice (VOL), Martin Zubimendi (VOL), Konstantinos Karetsas (MEI)</p>
+        <p>⚽ <strong>Atacantes:</strong> Bukayo Saka (PD), Rodrygo (PE), Viktor Gyökeres (ATA)</p>
+      </div>
+    </section>
+
+    <section id="elenco-reserva">
+      <h2>📋 Elenco Reserva</h2>
+      <div class="card">
+        <p>🧤 <strong>Goleiro:</strong> Juliano Guimarães</p>
+        <p>🛡️ <strong>Defensores:</strong> Nicolo Savona (LD), Evaristo Pastor (LD/LE), Cristhian Mosquera (ZAG), Lucas Beraldo (ZAG)</p>
+        <p>⚙️ <strong>Meio-Campistas:</strong> Francisco Márquez (VOL), Mikel Merino (VOL), Martin Ødegaard (MEI)</p>
+        <p>⚽ <strong>Atacantes:</strong> Noni Madueke (PD), Eberechi Eze (PE), Vitor Hugo Araújo (ATA)</p>
+      </div>
+    </section>
+
+    <section id="central-elenco">
+      <h2>💼 Central do Elenco (30/31)</h2>
+      
+      <div class="card">
+        <p>🧤 <strong>Goleiros</strong></p>
+        <table class="elenco-table">
+          <tr>
+            <td>Gonzalo Planas</td>
+            <td>20 anos</td>
+            <td>Espanha 🇪🇸</td>
+          </tr>
+          <tr>
+            <td>Juliano Guimarães</td>
+            <td>18 anos</td>
+            <td>Brasil 🇧🇷</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <p>🛡️ <strong>Laterais Esquerdos</strong></p>
+        <table class="elenco-table">
+          <tr>
+            <td>Juanma Pastor</td>
+            <td>21 anos</td>
+            <td>Argentina 🇦🇷</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <p>🛡️ <strong>Zagueiros</strong></p>
+        <table class="elenco-table">
+          <tr>
+            <td>William Saliba</td>
+            <td>30 anos</td>
+            <td>França 🇫🇷</td>
+          </tr>
+          <tr>
+            <td>Dean Huijsen</td>
+            <td>26 anos</td>
+            <td>Espanha 🇪🇸</td>
+          </tr>
+          <tr>
+            <td>Cristhian Mosquera</td>
+            <td>26 anos</td>
+            <td>Espanha 🇪🇸</td>
+          </tr>
+          <tr>
+            <td>Lucas Beraldo</td>
+            <td>27 anos</td>
+            <td>Brasil 🇧🇷</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <p>🛡️ <strong>Laterais Direitos</strong></p>
+        <table class="elenco-table">
+          <tr>
+            <td>Wesley</td>
+            <td>27 anos</td>
+            <td>Brasil 🇧🇷</td>
+          </tr>
+          <tr>
+            <td>Nicolo Savona</td>
+            <td>28 anos</td>
+            <td>Itália 🇮🇹</td>
+          </tr>
+          <tr>
+            <td>Evaristo Pastor</td>
+            <td>17 anos</td>
+            <td>Argentina 🇦🇷</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <p>⚙️ <strong>Volantes</strong></p>
+        <table class="elenco-table">
+          <tr>
+            <td>Declan Rice</td>
+            <td>32 anos</td>
+            <td>Inglaterra 🏴󠁧󠁢󠁥󠁮󠁧󠁿</td>
+          </tr>
+          <tr>
+            <td>Martin Zubimendi</td>
+            <td>32 anos</td>
+            <td>Espanha 🇪🇸</td>
+          </tr>
+          <tr>
+            <td>Francisco Márquez</td>
+            <td>18 anos</td>
+            <td>Espanha 🇪🇸</td>
+          </tr>
+          <tr>
+            <td>Mikel Merino</td>
+            <td>34 anos</td>
+            <td>Espanha 🇪🇸</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <p>⚙️ <strong>Meias</strong></p>
+        <table class="elenco-table">
+          <tr>
+            <td>Konstantinos Karetsas</td>
+            <td>23 anos</td>
+            <td>Grécia 🇬🇷</td>
+          </tr>
+          <tr>
+            <td>Martin Ødegaard</td>
+            <td>32 anos</td>
+            <td>Noruega 🇳🇴</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <p>⚽ <strong>Pontas Esquerdas</strong></p>
+        <table class="elenco-table">
+          <tr>
+            <td>Rodrygo</td>
+            <td>30 anos</td>
+            <td>Brasil 🇧🇷</td>
+          </tr>
+          <tr>
+            <td>Eberechi Eze</td>
+            <td>32 anos</td>
+            <td>Inglaterra 🏴󠁧󠁢󠁥󠁮󠁧󠁿</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <p>⚽ <strong>Pontas Direitas</strong></p>
+        <table class="elenco-table">
+          <tr>
+            <td>Bukayo Saka</td>
+            <td>29 anos</td>
+            <td>Inglaterra 🏴󠁧󠁢󠁥󠁮󠁧󠁿</td>
+          </tr>
+          <tr>
+            <td>Noni Madueke</td>
+            <td>29 anos</td>
+            <td>Inglaterra 🏴󠁧󠁢󠁥󠁮󠁧󠁿</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <p>⚽ <strong>Atacantes</strong></p>
+        <table class="elenco-table">
+          <tr>
+            <td>Viktor Gyökeres</td>
+            <td>32 anos</td>
+            <td>Suécia 🇸🇪</td>
+          </tr>
+          <tr>
+            <td>Vitor Hugo Araújo</td>
+            <td>17 anos</td>
+            <td>Brasil 🇧🇷</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="objetivos">
+      <h2>🎯 Objetivos da Temporada</h2>
+      <div class="card">
+        <p><strong>PREMIER LEAGUE</strong></p>
+        <ul>
+          <li><strong>Objetivo:</strong> Classificar para UEFA Champions League</li>
+          <li><strong>Prioridade:</strong> Muito Alta</li>
+          <li><strong>Resultado Final:</strong> Vice-Campeão (2º Colocado) 🥈</li>
+        </ul>
+        <p><strong>EMIRATES FA CUP</strong></p>
+        <ul>
+          <li><strong>Objetivo:</strong> Vencer a Competição</li>
+          <li><strong>Prioridade:</strong> Muito Alta</li>
+          <li><strong>Resultado Final:</strong> Campeão 🏆</li>
+        </ul>
+        <p><strong>UEFA EUROPA LEAGUE</strong></p>
+        <ul>
+          <li><strong>Objetivo:</strong> Vencer a Competição</li>
+          <li><strong>Prioridade:</strong> Muito Alta</li>
+          <li><strong>Resultado Final:</strong> Campeão 🏆</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="status-carreira">
+      <h2>🎯 Status da Carreira</h2>
+      <div class="card">
+        <p style="text-align: center; margin-bottom: 5px;"><strong>ESTABILIDADE NO CARGO:</strong></p>
+        <p style="text-align: center;"><span style="color: #EF0107; font-weight: bold; font-size: 24px;">RENOVAÇÃO GARANTIDA (SOB ANÁLISE)</span></p>
+        <hr style="border: 0; border-top: 1px solid #ddd; margin: 15px 0;">
+        <p style="text-align: center; font-size: 14px; color: #555;"><i>Nota da Diretoria: Contratado em janeiro de 2031 para um mandato emergencial de 6 meses. Apesar do atrito pela reformulação radical do plantel, o cumprimento das metas com os títulos da Europa League e FA Cup assegurou o respaldo para a temporada 31/32.</i></p>
+      </div>
+    </section>
+</div>
+
+<div id="temp3132" class="tab-content">
+    <section id="temporada-3132">
+      <h2>Temporada 31/32 – A Era da Autonomia Total</h2>
+      <div class="card">
+        <p>Após a renovação contratual polêmica, Maycon Santos inicia a temporada com a caneta na mão para fazer a limpa definitiva. O plano é claro: rejuvenescimento total do plantel, contratação de promessas de nível mundial e o ataque definitivo aos troféus da Premier League e da UEFA Champions League.</p>
+      </div>
+    </section>
+</div>
+
+<footer>
+  <p>Projeto Modo Carreira EA FC 26 – Arsenal FC | Treinador Maycon Santos</p>
+</footer>
+
+<script>
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tab-button");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+
+</body>
+</html>
