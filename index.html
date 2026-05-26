@@ -8,16 +8,16 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      background: linear-gradient(135deg, #EF0107 0%, #ffffff 100%);
+      background: linear-gradient (135 deg, #EF0107 0 %, #ffffff 100 %);
       color: #222;
       line-height: 1.6;
     }
     header {
       background: #EF0107;
       color: #fff;
-      padding: 20px;
+      padding: 20 px;
       text-align: center;
-      border-bottom: 4px solid #FEF200;
+      border-bottom: 4 px solid #FEF200;
     }
     nav {
       background: #063672;
@@ -69,7 +69,7 @@
       background: #ffffff;
       margin-top: 20 px;
       border-radius: 12 px;
-      box-shadow: 0 4 px 12 px rgba(0,0,0,0.15);
+      box-shadow: 0 4 px 12 px rgba (0,0,0,0.15);
     }
     h2 {
       color: #EF0107;
@@ -127,7 +127,7 @@
       height: 400 px;
       object-fit: cover;
       border-radius: 20 px;
-      box-shadow: 0 10 px 25 px rgba(0,0,0,0.4);
+      box-shadow: 0 10 px 25 px rgba (0,0,0,0.4);
       border: 1 px solid #ddd;
     }
 
@@ -183,7 +183,7 @@
 <body>
 
 <script>
-  var senha = prompt("Digite a senha para acessar o site:");
+  varsenha = prompt("Digite a senha para acessar o site:");
   if (senha !== "chupabife") {
     alert("Senha incorreta!");
     window.location.href = "https://google.com";
@@ -194,7 +194,7 @@
   <img src="img/arsenal-logo.jpg" alt="Escudo do Arsenal" style="width:120 px; margin-bottom:10 px;">
   <h1>Arsenal FC – Modo Carreira EA FC 26</h1>
   <p>Treinador: Maycon Santos (Brasil)</p>
-  <div style="background: rgba(0,0,0,0.2); display: inline-block; padding: 10 px 20 px; border-radius: 10 px; margin-top: 10 px;">
+  <div style="background: rgba (0,0,0,0.2); display: inline-block; padding: 10 px 20 px; border-radius: 10 px; margin-top: 10 px;">
     <p style="margin: 5 px 0;"><strong>Salário Semanal:</strong> €0</p>
     <p style="margin: 5 px 0;"><strong>Salário Mensal:</strong> €0</p>
     <p style="margin: 5 px 0;"><strong>Salário Anual:</strong> €0</p>
@@ -204,7 +204,7 @@
 <section id="foto-treinador">
   <div class="card" style="text-align:center;">
     <img src="img/treinador-maycon.jpg" alt="Treinador Maycon Santos"
-         style="width:220 px;border-radius:15 px;box-shadow:0 8 px 20 px rgba(0,0,0,0.35);">
+         style="width:220 px;border-radius:15 px;box-shadow:0 8 px 20 px rgba (0,0,0,0.35);">
     <p><strong>Maycon Santos</strong></p>
     <p>Treinador do Arsenal FC</p>
   </div>
@@ -215,9 +215,9 @@
 </div>
 
 <script>
-  const musica = new Audio("audio/hino-arsenal.mp3");
+  constmusica = newAudio("audio/hino-arsenal.mp3");
   musica.loop = true;
-  const botao = document.getElementById("botaoMusica");
+  constbotao = document.getElementById("botaoMusica");
 
   botao.addEventListener("click", function () {
     if (musica.paused) {
@@ -284,7 +284,7 @@
           </tbody>
         </table>
 
-        <p style="margin-top: 20px;"><strong>📈 Indicadores de Performance:</strong></p>
+        <p style="margin-top: 20 px;"><strong>📈 Indicadores de Performance:</strong></p>
         <ul>
           <li>Valor do Clube: <strong>$ 1,35 bi</strong></li>
           <li>Projeção Final: <strong>$ 1,55 bi</strong></li>
@@ -548,10 +548,10 @@
     <section id="status-carreira">
       <h2>🎯 Status da Carreira</h2>
       <div class="card">
-        <p style="text-align: center; margin-bottom: 5px;"><strong>ESTABILIDADE NO CARGO:</strong></p>
-        <p style="text-align: center;"><span style="color: #EF0107; font-weight: bold; font-size: 24px;">RENOVAÇÃO GARANTIDA (SOB ANÁLISE)</span></p>
-        <hr style="border: 0; border-top: 1px solid #ddd; margin: 15px 0;">
-        <p style="text-align: center; font-size: 14px; color: #555;"><i>Nota da Diretoria: Contratado em janeiro de 2031 para um mandato emergencial de 6 meses. Apesar do atrito pela reformulação radical do plantel, o cumprimento das metas com os títulos da Europa League e FA Cup assegurou o respaldo para a temporada 31/32.</i></p>
+        <p style="text-align: center; margin-bottom: 5 px;"><strong>ESTABILIDADE NO CARGO:</strong></p>
+        <p style="text-align: center;"><span style="color: #EF0107; font-weight: bold; font-size: 24 px;">RENOVAÇÃO GARANTIDA (SOB ANÁLISE)</span></p>
+        <hr style="border: 0; border-top: 1 px solid #ddd; margin: 15 px 0;">
+        <p style="text-align: center; font-size: 14 px; color: #555;"><i>Nota da Diretoria: Contratado em janeiro de 2031 para um mandato emergencial de 6 meses. Apesar do atrito pela reformulação radical do plantel, o cumprimento das metas com os títulos da Europa League e FA Cup assegurou o respaldo para a temporada 31/32.</i></p>
       </div>
     </section>
 </div>
